@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:background="@drawable/tencent_tls_ui_btn_white_gray_bg"
+        android:textColor="@color/tencent_tls_ui_deepgray"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_alignParentBottom="true"
+        android:divider="@drawable/tencent_tls_ui_divider"
+        android:showDividers="middle">
+
+        <LinearLayout
+            android:id="@+id/btn_guestlogin"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView android:src="@drawable/tencent_tls_ui_visitor"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="@dimen/tencent_tls_ui_icon_width"
+                android:layout_height="@dimen/tencent_tls_ui_icon_height" />
+
+            <TextView android:text="游客登录"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_qqlogin"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView android:src="@drawable/tencent_tls_ui_qq"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="@dimen/tencent_tls_ui_icon_width"
+                android:layout_height="@dimen/tencent_tls_ui_icon_height" />
+
+            <TextView android:text="QQ登录"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_wxlogin"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView android:src="@drawable/tencent_tls_ui_wechat"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="@dimen/tencent_tls_ui_icon_width"
+                android:layout_height="@dimen/tencent_tls_ui_icon_height" />
+
+            <TextView android:text="微信登录"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        
+        
+        
+        
+        
+
+        <!-- <LinearLayout
+            android:id="@+id/btn_sinawblogin"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView android:src="@drawable/tencent_tls_ui_sina_weibo"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="@dimen/tencent_tls_ui_icon_width"
+                android:layout_height="@dimen/tencent_tls_ui_icon_height" />
+
+            <TextView android:text="微博登录"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout> -->
+
+    </LinearLayout>
+
+</merge>

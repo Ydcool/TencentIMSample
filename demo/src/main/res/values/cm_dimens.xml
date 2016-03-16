@@ -1,0 +1,34 @@
+<resources>
+
+	<!-- 文本 -->
+	<dimen name="textSizeS1">19sp</dimen>
+	<dimen name="textSizeS2">18sp</dimen>
+	<dimen name="textSizeS3">15sp</dimen>
+	<dimen name="textSizeS4">12sp</dimen>
+	<dimen name="textSizeS5">13sp</dimen>
+	<dimen name="textSizeS6">14sp</dimen>
+	<dimen name="textSizeS7">11sp</dimen>
+	
+	<!-- 导航栏  -->
+    <dimen name="nav_height">52dp</dimen>
+    <dimen name="nav_btn_height">34dp</dimen>
+    <dimen name="nav_btn_text_size">15sp</dimen>
+    <dimen name="nav_padding_top">50dp</dimen>
+    <!-- Button  padding -->
+    <dimen name="btn_padding_left">8dp</dimen>
+    <dimen name="btn_padding_right">8dp</dimen>
+    <!-- Button back padding left -->
+    <dimen name="btn_back_padding_left">15dp</dimen>
+    <dimen name="btn_back_padding_right">8dp</dimen>
+    <!-- Tip Layout padding -->
+    <dimen name="tip_layout_padding">10dp</dimen>
+    <dimen name="popup_win_height">42dp</dimen>
+    
+    
+    <dimen name="aio_text_size_small_stable">16dp</dimen>
+    <dimen name="aio_text_size_small">16sp</dimen>
+    <dimen name="aio_text_size_middle">18sp</dimen>
+    <dimen name="aio_text_size_large">20sp</dimen>
+    <dimen name="aio_text_size_extra_large">22sp</dimen>
+
+</resources>

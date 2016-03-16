@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 输入框内文本颜色, 统一使用这个 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="#000000" />
+</selector>

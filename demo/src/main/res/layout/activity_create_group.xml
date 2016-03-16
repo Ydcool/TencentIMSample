@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f0eb" >
+
+   <RelativeLayout
+		 android:id="@+id/top_bar"
+		 android:layout_width="fill_parent"
+		 android:layout_height="@dimen/top_bar"
+		 android:background="@drawable/title_bar"
+		 android:orientation="vertical" >
+
+		  <Button
+			android:id="@+id/btn_chat_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/back_btn"
+            android:gravity="center_horizontal|center_vertical"            
+            android:onClick="onBack" />
+
+		<TextView
+			android:id="@+id/chat_name"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:text="创建群"
+			android:textColor="#ffffff"
+			android:textSize="20.0sp" />		
+	 		
+	      
+	</RelativeLayout>
+
+  
+   <LinearLayout 
+          android:id="@+id/ll_groupname"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content" 
+    	  android:layout_below="@id/top_bar"		
+    	  android:layout_marginTop="10dp"
+    	  android:layout_marginBottom="10dp"  			 	
+		  android:gravity="center_vertical" 
+		  android:orientation="horizontal"  >  
+  			
+      		<TextView
+      		    android:layout_width="wrap_content"
+      		    android:layout_height="wrap_content"
+      		    android:layout_alignParentLeft="true"
+      		    android:layout_centerVertical="true"
+      		    android:layout_marginLeft="10dp"
+      		    android:text="群名称"
+      		    android:textColor="#000000"
+      		    android:textSize="16sp" />
+
+			<EditText 	
+		    	android:id="@+id/et_groupname"		       
+       			android:layout_height="30dp"
+       			android:layout_weight="5"	       
+		        android:layout_width="0dp"
+		        android:layout_marginLeft="5dp"
+		        android:layout_marginRight="5dp"
+		        android:background="@drawable/editview_search_new_friend"	   
+		        android:paddingLeft="10dp"
+	            android:maxLines="1"   
+	            android:singleLine="true" 
+		       android:textSize="16.0sp"/>      
+		       
+			<Button
+			    android:id="@+id/btn_create_group"
+				android:layout_width="0dp"
+				android:layout_weight="1"	
+				android:layout_height="35dp" 
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:layout_marginRight="10dp"
+				android:background="@drawable/editview_search_new_friend"
+				android:text="确定"				
+				android:textSize="15sp"  />   			
+		</LinearLayout>
+		
+     <ListView
+         android:id="@+id/lv_contacts"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent" 
+    	 android:layout_below="@id/ll_groupname"
+	        android:cacheColorHint="#00000000"
+	        android:background="@android:color/transparent"
+	        android:divider="#e0e0e0"
+			android:dividerHeight="0.5dp" />     
+</RelativeLayout>

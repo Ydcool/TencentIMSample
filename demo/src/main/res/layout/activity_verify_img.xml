@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/root_common"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28.0dip"
+        android:layout_marginRight="28.0dip"
+        android:layout_marginTop="100.0dip"
+        android:orientation="vertical" >
+        
+	    <ImageView
+	        android:layout_width="130dp"
+	        android:layout_height="53dp"
+	        android:id="@+id/imgcodeView"
+	        android:layout_gravity="center_horizontal" />
+	    
+	     <LinearLayout
+	        android:id="@+id/ll_verify"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+		    android:orientation="horizontal" >
+		    <EditText
+		        android:layout_width="0dp"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="3"
+		        android:id="@+id/imgcode"
+		        android:layout_gravity="center_horizontal"
+		        android:layout_marginTop="16dp" />
+		
+		    <Button
+			     android:layout_width="0dp"
+		        android:layout_height="45dp"
+		        android:layout_weight="2"
+		        android:layout_marginLeft="15dp"
+		        android:text="验证并登录"
+		        android:id="@+id/btn_verify"
+		        android:layout_gravity="center_horizontal"
+		        android:background="@drawable/btn_register_bg" />
+	    </LinearLayout>
+	</LinearLayout>
+</LinearLayout>

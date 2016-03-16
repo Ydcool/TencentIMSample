@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" 
+    android:orientation="vertical" 
+    android:paddingTop="10dp">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_sendtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/chat_text_date_style" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"  >
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"           
+            android:focusable="false" 
+            android:src="@drawable/chat_default_avatar"/>
+        
+           <TextView
+	           android:id="@+id/tv_username"
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"	             
+	           android:layout_toLeftOf="@id/iv_avatar"
+	           android:paddingRight="@dimen/aio_msg_content_distance"
+	           style="@style/chat_text_name_style"
+	           android:text = "text" />
+
+        <TextView
+            android:id="@+id/tv_chatcontent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"    
+            android:layout_toLeftOf="@id/iv_avatar"           
+            android:layout_below="@id/tv_username"
+            style="@style/chat_content_date_style"
+            android:background="@drawable/aio_user_bg"
+            android:paddingLeft="@dimen/aio_msg_content_distance"
+            android:paddingRight="@dimen/aio_msg_content_distance" 
+            android:maxWidth="@dimen/aio_msg_max_width" /> 
+			
+	
+            <ProgressBar
+                android:id="@+id/pb_status"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                 android:layout_centerVertical="true"
+           		android:layout_toLeftOf="@id/tv_chatcontent"
+                android:visibility="gone" />
+        
+           <ImageView
+            android:id="@+id/iv_msg_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tv_chatcontent"
+            android:clickable="true"
+            android:src="@drawable/msg_resend"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

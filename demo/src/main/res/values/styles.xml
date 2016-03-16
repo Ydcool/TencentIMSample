@@ -1,0 +1,56 @@
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <style name="AppTheme" parent="android:Theme.Light" />
+    
+    <style name="chat_text_date_style">
+        <item name="android:padding">2dp</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:background">#bfbfbf</item>
+    </style>
+
+    <style name="chat_content_date_style">
+        <item name="android:minHeight">30dp</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>   
+        <item name="android:text">textcontent</item>
+    </style>
+
+    <style name="chat_text_name_style">
+        <item name="android:textColor">#818181</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">right</item>
+        <item name ="android:maxEms">18</item>
+	    <item name ="android:singleLine">true</item>
+	    <item name ="android:ellipsize">end</item>	    
+    </style>    
+
+    <style name="chat_text_name_style_left">
+        <item name="android:textColor">#818181</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">left</item>
+        <item name ="android:maxEms">18</item>
+	    <item name ="android:singleLine">true</item>
+	    <item name ="android:ellipsize">end</item>	    
+    </style>        
+    
+    <style name="Icon">
+        <item name="android:textColor">#FFF</item>
+        <item name="android:shadowRadius">2.0</item>
+        <item name="android:shadowColor">#B0000000</item>
+        <!-- <item name="android:fontFamily">sans-serif-condensed</item> -->
+        <item name="android:textSize">14sp</item>
+    </style>    
+	<style name="Transparent">  
+	    <item name="android:windowBackground">@color/transparent</item>  
+	    <item name="android:windowNoTitle">true</item>  
+	<item name="android:windowIsTranslucent">true</item>
+    </style>     
+</resources>

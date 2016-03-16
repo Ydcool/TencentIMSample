@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.tencent.tls"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="oicq.wlogin_sdk.permission.WloginProvider.READ"/>
+    <uses-permission android:name="oicq.wlogin_sdk.permission.WloginProvider.WRITE"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+
+    <application>
+        <activity
+            android:name=".activity.PhoneSmsLoginActivity"
+            android:label="@string/tencent_tls_ui_app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/tencent_tls_ui_theme"/>
+        <activity
+            android:name=".activity.PhoneSmsRegisterActivity"
+            android:label="@string/tencent_tls_ui_title_activity_host_register"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/tencent_tls_ui_theme"/>
+        <activity
+            android:name=".activity.StrAccLoginActivity"
+            android:label="@string/tencent_tls_ui_title_activity_independent_login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/tencent_tls_ui_theme"/>
+        <activity
+            android:name=".activity.StrAccRegisterActivity"
+            android:label="@string/tencent_tls_ui_title_activity_independent_register"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/tencent_tls_ui_theme"/>
+        <activity
+            android:name=".activity.ImgCodeActivity"
+            android:label="@string/tencent_tls_ui_title_activity_imgcode"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/tencent_tls_ui_theme"/>
+        <activity
+            android:name=".activity.SelectCountryCodeActivity"
+            android:label="SelectCountryCodeActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/tencent_tls_ui_theme"/>
+        <activity
+            android:name=".activity.PhonePwdLoginActivity"
+            android:label="@string/tencent_tls_ui_title_activity_phone_pwd"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/tencent_tls_ui_theme"/>
+        <activity
+            android:name=".activity.PhonePwdRegisterActivity"
+            android:label="@string/tencent_tls_ui_title_activity_phone_pwd_register"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/tencent_tls_ui_theme"/>
+        <activity
+            android:name=".activity.ResetPhonePwdActivity"
+            android:label="@string/tencent_tls_ui_title_activity_reset_phone_pwd"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/tencent_tls_ui_theme"/>
+
+        <!-- QQ登录 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="tencent1104701569"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <!-- 新浪微博登录 -->
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"/>
+    </application>
+
+</manifest>

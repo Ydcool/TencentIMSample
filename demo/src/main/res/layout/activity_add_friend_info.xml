@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/root_common"
+    android:orientation="vertical" >
+
+     <RelativeLayout
+         android:layout_width="fill_parent"
+         android:layout_height="@dimen/top_bar"
+         android:background="@drawable/title_bar"
+         android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btn_addfriend_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/back_btn"
+            android:gravity="center_horizontal|center_vertical"            
+            android:onClick="onBack" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="朋友验证"
+            android:textColor="@color/white"
+            android:textSize="20.0sp" /> 
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:id="@+id/input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginRight="20.0dip"
+        android:layout_marginTop="20.0dip"
+        android:orientation="vertical" >  
+        
+         <TextView
+      		android:layout_width="wrap_content" 
+       		android:layout_height="wrap_content" 
+       		android:text="你需要发送验证申请，等对方通过"
+       		android:layout_alignParentLeft="true"
+       		android:textSize="16sp"		
+			android:textColor="#555555"  />
+           
+        <EditText
+            android:id="@+id/et_request_info"
+            android:layout_width="255dp"
+            android:layout_height="107dp"
+             android:layout_marginTop="10dp"
+            android:background="@drawable/editview_search_new_friend"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="@string/account"
+            android:maxLength="50"
+            android:maxLines="3"
+            android:paddingLeft="10dp"
+            android:textSize="16.0sp" >
+            <requestFocus />
+        </EditText>
+        <Button
+            android:id="@+id/btn_add_friend"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"            
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/editview_search_new_friend"
+            android:onClick="onRequestFriend"
+            android:text="确定"
+            android:textSize="16sp" />
+    </LinearLayout>  
+    
+    
+
+</LinearLayout>

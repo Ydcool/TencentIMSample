@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/root_common"
+    android:orientation="vertical" >
+
+     <RelativeLayout
+         android:layout_width="fill_parent"
+         android:layout_height="@dimen/top_bar"
+         android:background="@drawable/title_bar"
+         android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btn_addfriend_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/back_btn"
+            android:gravity="center_horizontal|center_vertical"            
+            android:onClick="onBack" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="添加好友"
+            android:textColor="@color/white"
+            android:textSize="20.0sp" /> 
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+			
+		<LinearLayout
+	        android:id="@+id/ll_search"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="20.0dip"
+	        android:layout_marginRight="20.0dip"
+	        android:layout_marginTop="20.0dip"
+	        android:orientation="horizontal" >  
+	        
+	        <EditText
+	            android:id="@+id/et_search_user"         
+	            android:layout_height="40dp"
+				android:layout_width="wrap_content"        	
+	            android:layout_weight="5"
+	            android:background="@drawable/editview_search_new_friend"
+	            android:ems="10"
+	            android:gravity="center_vertical"
+	            android:hint="输入ID/号码/昵称"
+	            android:maxLength="16"
+	            android:maxLines="1"
+	            android:paddingLeft="10dp"
+	            android:textSize="16.0sp" >
+	
+	            <requestFocus />
+	        </EditText>
+	
+	        <Button
+	            android:id="@+id/btn_search_friend"
+	            android:layout_width="46dp"  
+	            android:layout_weight="1"
+	            android:layout_height="35dp"            
+	            android:layout_marginLeft="10dip"
+	            android:background="@drawable/editview_search_new_friend"
+	            android:onClick="onSearchFriend"
+	            android:text="查找"
+	            android:textSize="16sp" />
+	        
+	    </LinearLayout>        
+
+        <ProgressBar
+            android:id="@+id/pb_load_more"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_below="@id/ll_search"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/lv_friends"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/pb_load_more"
+         	android:cacheColorHint="#00000000"
+	        android:background="@android:color/transparent"
+	        android:divider="#e0e0e0"
+			android:dividerHeight="0.5dp" />     
+
+        
+    </RelativeLayout>
+    
+    
+    
+</LinearLayout>

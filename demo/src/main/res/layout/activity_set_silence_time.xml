@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainweixin"
+    android:layout_width="fill_parent"    
+    android:orientation="vertical"
+    android:layout_height="fill_parent"   
+ >  
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"        
+        android:layout_centerInParent="true"
+        android:background="#ffffff"
+        android:orientation="horizontal" >      
+	
+        <EditText
+            android:id="@+id/et_silence_time"         
+            android:layout_height="40dp"
+			android:layout_width="wrap_content"        	
+            android:layout_weight="5"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/editview_search_new_friend"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="输入时长(秒)"            
+            android:maxLines="1"
+            android:singleLine="true" 
+            android:paddingLeft="10dp"
+            android:textSize="16.0sp"
+            android:textColor="#000000"  >
+		
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/btn_set_silence_time"
+            android:layout_width="46dp"  
+            android:layout_weight="1"
+            android:layout_height="35dp"            
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/editview_search_new_friend"
+            android:onClick="onSetSilenceTime"
+            android:text="确定"
+            android:textColor="#000000" 
+            android:gravity="center"
+            android:textSize="16sp" />
+   
+        
+    </LinearLayout>
+
+
+</RelativeLayout>

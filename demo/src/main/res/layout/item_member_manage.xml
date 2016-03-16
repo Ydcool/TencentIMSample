@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"    
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:src="@drawable/user_icon" 
+            android:focusable="false" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/iv_avatar"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/member_name"
+                    android:layout_width="95dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"                    
+                    android:text="text"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#000000"
+                    android:textColorLink="#000000"                    
+                    android:singleLine="true"
+                    	 android:ellipsize="end"	                    
+                    android:textSize="14sp" />  
+                    
+                <TextView
+                    android:id="@+id/nick_name"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/member_name"
+                    android:paddingLeft="5dp"                 
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#000000"
+                    android:textColorLink="#000000"
+                    android:singleLine="true"
+                     android:ellipsize="end"
+                    android:textSize="14sp" 
+                    android:clickable="true"/>                   
+                
+ 				<Button
+                    android:id="@+id/bt_set_silence"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"                  
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="禁言"
+                    android:textSize="10sp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColorLink="#888888" />
+ 				
+ 				<Button
+                    android:id="@+id/bt_set_role"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/bt_set_silence"              
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:textSize="10sp"
+                    android:text="普通成员"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColorLink="#888888"/> 	
+                    
+          <Button
+                    android:id="@+id/bt_set_namecard"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/bt_set_role"              
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:textSize="10sp"
+                    android:text="名片"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColorLink="#888888"/>     							
+             
+            </RelativeLayout>
+
+           
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

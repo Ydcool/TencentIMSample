@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="top_bar">#1bb3cf</color>
+    <color name="common_normal">#1bb3cf</color>
+    <color name="common_pressed">#106576</color>
+    <color name="root_common">#fcfcfc</color>
+    <color name="btn_register_normal">#9ec3bb</color>
+    <color name="btn_register_pressed">#cccccc</color>
+    <color name="white">#ffffff</color>    
+    <color name="common_bottom_bar_normal_bg">#2d2f31</color>
+    <color name="common_bottom_bar_selected_bg">#161718</color>
+    <color name="common_botton_bar_blue">#2ea7e0</color>
+    <color name="bottom_bar_normal_bg">#2D2F31</color>
+    <color name="btn_logout_normal">#d03030</color>
+    <color name="btn_logout_pressed">#D05040</color>
+    <color name="gray_normal">#666667</color>   
+    <drawable name="trans">#00000000</drawable>  
+    <color name="chat_input_shadow_color">#C8C9CA</color>
+    <color name="ok_btn_color">#00afff</color> 
+    <color name="transparent">#50000000</color>  
+</resources>

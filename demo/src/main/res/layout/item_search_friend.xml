@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"    
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+
+              
+        <ImageView
+            android:id="@+id/img_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="2dp"
+            android:src="@drawable/user_icon" 
+            android:focusable="false" />
+               
+ 		  <Button
+             android:id="@+id/btn_add_friend"  
+			 android:layout_width="55dp"  
+			android:layout_height="35dp" 
+             android:layout_alignParentRight="true"             
+            android:layout_marginRight="20dip"
+            android:background="@drawable/editview_search_new_friend"       
+            android:onClick="onAddFriend"    
+            android:text="添加"            
+
+            android:textSize="16sp" />
+
+ 		  <TextView
+ 		      android:id="@+id/tv_friend_name"
+ 		      android:layout_width="wrap_content"
+ 		      android:layout_height="wrap_content"
+ 		      android:layout_alignBaseline="@+id/btn_add_friend"
+ 		      android:layout_alignBottom="@+id/btn_add_friend"
+ 		      android:layout_toRightOf="@+id/img_avatar"
+ 		      android:paddingLeft="3dp"
+ 		      android:text="Text"
+ 		      android:textAppearance="?android:attr/textAppearanceSmall"
+ 		      android:textColor="#000000"
+ 		      android:textColorLink="#000000"
+ 		      android:textSize="18sp" />
+                 
+	</RelativeLayout>
+</LinearLayout>

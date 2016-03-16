@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f0eb" >
+
+   <RelativeLayout
+		 android:id="@+id/top_bar"
+		 android:layout_width="fill_parent"
+		 android:layout_height="@dimen/top_bar"
+		 android:background="@drawable/title_bar"
+		 android:orientation="vertical" >
+
+		  <Button
+			android:id="@+id/btn_chat_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/back_btn"
+            android:gravity="center_horizontal|center_vertical"            
+            android:onClick="onBack" />
+
+		<TextView
+			android:id="@+id/chat_name"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:text="群聊"
+			android:textColor="#ffffff"
+			android:textSize="20.0sp" />
+		
+		
+			<Button
+			    android:id="@+id/btn_goto_create_group"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:layout_marginRight="15dp"
+				android:background="@drawable/add_friend" />   
+				
+				
+			<Button
+			    android:id="@+id/btn_goto_search_group"
+				android:layout_width="30dp"
+				android:layout_height="30dp"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:layout_marginRight="90dp"
+				android:background="@drawable/create1_group" />        
+	</RelativeLayout>
+
+   
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bar_bottom"
+        android:layout_below="@id/top_bar" >
+
+        <ProgressBar
+            android:id="@+id/pb_load_more"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/lv_groups"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/pb_load_more"
+         	android:cacheColorHint="#00000000"
+	        android:background="@android:color/transparent"
+	        android:divider="#e0e0e0"
+			android:dividerHeight="0.5dp" />     
+
+        
+    </RelativeLayout>
+
+</RelativeLayout>

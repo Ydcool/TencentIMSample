@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <RelativeLayout
+		 android:id="@+id/top_bar"
+		 android:layout_width="fill_parent"
+		 android:layout_height="@dimen/top_bar"
+		 android:background="@drawable/title_bar"
+		 android:orientation="vertical" >
+
+		  <Button
+			android:id="@+id/btn_chat_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/back_btn"
+            android:gravity="center_horizontal|center_vertical"            
+            android:onClick="onBack" />
+
+		<TextView
+			android:id="@+id/chat_name"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:text="预览"
+			android:textColor="#ffffff"
+			android:textSize="20.0sp" />		
+	 		
+	      
+	</RelativeLayout>
+	
+	<RelativeLayout
+		android:id="@+id/bottom_bar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:minHeight="50dp"
+		android:background="@drawable/title_bar"
+		android:layout_alignParentBottom="true" >
+        
+        <CheckBox
+            android:id="@+id/cb_pic_org"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/cm_blue_check_bg"
+            android:button="@null"
+            android:checked="true" />
+          <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/cb_pic_org"
+            android:text="原图"
+            android:textColor="@color/white"
+            android:textSize="20.0sp" /> 
+            
+          <TextView
+            android:id="@+id/tv_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/textView2"
+            android:text="(1024k)"
+            android:textColor="@color/white"
+            android:textSize="18.0sp" />           
+        
+		<Button
+			android:id="@+id/btn_photo_send"
+			android:layout_width="wrap_content"
+			android:layout_height="35dp"
+			android:layout_marginRight="10dp"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:text="发送" 
+			android:textColor="@color/white"
+            android:background="@drawable/common_background"
+			android:paddingLeft="15dp"
+			android:paddingRight="15dp" />
+
+    </RelativeLayout>
+	<ImageView
+		android:id="@+id/iv_pic"
+		android:layout_above="@id/bottom_bar"
+		android:layout_below="@id/top_bar"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" />
+</RelativeLayout>

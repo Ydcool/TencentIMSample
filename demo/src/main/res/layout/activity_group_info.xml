@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/root_common"
+    android:orientation="vertical" >
+
+     <RelativeLayout
+         android:layout_width="fill_parent"
+         android:layout_height="@dimen/top_bar"
+         android:background="@drawable/title_bar"
+         android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btn_addfriend_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/back_btn"
+            android:gravity="center_horizontal|center_vertical"            
+            android:onClick="onBack" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="群信息"
+            android:textColor="@color/white"
+            android:textSize="20.0sp" /> 
+    </RelativeLayout>
+    
+ 
+    <ScrollView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+        
+        
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" > 
+        	
+		        <com.example.mydemo.view.MyGridView
+		             android:id="@+id/gv_members"
+		 			 android:layout_width="match_parent"
+		             android:layout_height="70dp"    
+		             android:layout_marginBottom="10dp"
+		             android:layout_marginLeft="10dp"
+		             android:layout_marginRight="10dp"
+		             android:layout_marginTop="10dp"
+		             android:horizontalSpacing="10dp"
+		             android:verticalSpacing="10dp" 
+		             android:numColumns="4"
+		             android:listSelector="@android:color/transparent"
+		             android:stretchMode="columnWidth"  
+    				 android:gravity="center"   />                      
+	                <View
+			            android:layout_width="fill_parent"
+			            android:layout_height="1.0px"
+			   		    android:layout_marginTop="10dp"
+			            android:layout_marginLeft="5dp"
+			            android:layout_marginRight="5dp"
+			            android:background="#ffc0c3c4" />
+	                
+        
+			    <RelativeLayout		
+			        android:id="@+id/rl_nick_name"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_marginTop="10dp"
+			        android:layout_marginLeft="15dp" 
+			        android:clickable="true">    
+			
+			         <TextView
+			             android:id = "@+id/tv_nick_name_tag"
+			             android:layout_width="wrap_content"
+			             android:layout_height="wrap_content"
+			             android:layout_alignParentLeft="true"
+			             android:paddingLeft="10dp"
+			             android:text="群名片"
+			             android:textAppearance="?android:attr/textAppearanceSmall"
+			            android:layout_centerHorizontal="true"
+			             android:textColor="#000000"    
+			             android:textSize="16sp" />
+			               
+			 		  <TextView
+			             android:id="@+id/tv_nick_name"
+			             android:layout_width="wrap_content"
+			             android:layout_height="wrap_content"
+			             android:layout_alignParentRight="true"
+			             android:layout_toRightOf="@id/tv_nick_name_tag"	
+			             android:paddingRight="40dp"
+			             android:gravity="right"
+			             android:layout_centerHorizontal="true"
+			             android:text="text"
+			             android:textAppearance="?android:attr/textAppearanceSmall"
+			             android:textColor="#555555"    
+                    	 android:singleLine="true"
+                    	 android:ellipsize="end"			             
+			             android:textSize="16sp" />  
+			             
+			          <ImageView
+			              android:id="@+id/iv_goto_edit_nick_name"
+			              android:layout_width="wrap_content"
+			              android:layout_height="wrap_content"			              
+			              android:layout_alignParentRight="true"
+			              android:layout_marginTop="5dp"			              
+			              android:paddingRight="20dp"
+			              android:src="@drawable/group_more" />
+ 
+			    </RelativeLayout>		
+					                
+
+			<RelativeLayout
+			    android:id="@+id/rl_setting_face"
+			    android:layout_width="fill_parent"
+			    android:layout_height="40dp"
+			    android:layout_marginLeft="28.0dip"
+			    android:layout_marginRight="28.0dip"
+			    android:layout_marginTop="5dip"
+			    android:clickable="true"
+			    android:gravity="center_vertical"
+			    android:visibility="gone" >
+
+			    <ImageView
+			        android:id="@+id/iv_face_more"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentRight="true"
+			        android:layout_marginTop="5dp"
+			        android:src="@drawable/group_more" />
+
+			    <ImageView
+			        android:id="@+id/iv_face"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignBottom="@+id/textView1"
+			        android:layout_marginLeft="2dp"
+			        android:layout_toLeftOf="@+id/iv_face_more"
+			        android:src="@drawable/icon_group" />
+
+			    <TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentLeft="true"
+			        android:layout_centerVertical="true"
+			        android:text="头像"
+			        android:textColor="#000000"
+			        android:textSize="16sp" />
+			</RelativeLayout>
+	 	                <View
+			            android:layout_width="fill_parent"
+			            android:layout_height="1.0px"
+			   		    android:layout_marginTop="10dp"
+			            android:layout_marginLeft="5dp"
+			            android:layout_marginRight="5dp"
+			            android:background="#ffc0c3c4" />               
+			    <RelativeLayout		
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_marginTop="10dp"
+			        android:layout_marginLeft="15dp" >    
+			
+			         <TextView
+			             android:layout_width="wrap_content"
+			             android:layout_height="wrap_content"
+			             android:layout_alignParentLeft="true"
+			             android:paddingLeft="10dp"
+			             android:text="群创建者"
+			             android:textAppearance="?android:attr/textAppearanceSmall"
+			             android:textColor="#000000"    
+			             android:textSize="16sp" />
+			               
+			 		  <TextView
+			             android:id="@+id/tv_group_owner"
+			             android:layout_width="wrap_content"
+			             android:layout_height="wrap_content"
+			             android:layout_alignParentRight="true"
+			             android:paddingRight="20dp"
+			             android:text="Text"
+			             android:textAppearance="?android:attr/textAppearanceSmall"
+			             android:textColor="#555555"    
+			             android:textSize="16sp" />   
+			    </RelativeLayout>
+			    
+			<View
+		            android:layout_width="fill_parent"
+		            android:layout_height="1.0px"
+		            android:layout_marginTop="10dp"
+		            android:layout_marginLeft="5dp"
+		            android:layout_marginRight="5dp"
+		            android:background="#ffc0c3c4" />			    
+			<RelativeLayout		
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_marginTop="10dp"
+			        android:layout_marginLeft="15dp" >    
+			
+			         <TextView
+			             android:layout_width="wrap_content"
+			             android:layout_height="wrap_content"
+			             android:layout_alignParentLeft="true"
+			             android:paddingLeft="10dp"
+			             android:text="群组ID"
+			             android:textAppearance="?android:attr/textAppearanceSmall"
+			             android:textColor="#000000"    
+			             android:textSize="16sp" />
+			               
+			 		  <TextView
+			             android:id="@+id/tv_group_id"
+			             android:layout_width="wrap_content"
+			             android:layout_height="wrap_content"
+			             android:layout_alignParentRight="true"
+			             android:paddingRight="20dp"
+			             android:text="Text"
+			             android:textAppearance="?android:attr/textAppearanceSmall"
+			             android:textColor="#555555"    
+			             android:textSize="16sp" />   
+			    </RelativeLayout>			    
+			    
+				<View
+		            android:layout_width="fill_parent"
+		            android:layout_height="1.0px"
+		            android:layout_marginTop="10dp"
+		            android:layout_marginLeft="5dp"
+		            android:layout_marginRight="5dp"
+		            android:background="#ffc0c3c4" />	                	                
+	        
+			    <RelativeLayout		
+			        android:id="@+id/rl_group_name"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_marginTop="10dp"
+			        android:layout_marginLeft="15dp" 
+			        android:clickable="true">    
+			
+			         <TextView
+			             android:id = "@+id/tv_group_name_tag"
+			             android:layout_width="wrap_content"
+			             android:layout_height="wrap_content"
+			             android:layout_alignParentLeft="true"
+			             android:paddingLeft="10dp"
+			             android:text="群聊名称"
+			             android:textAppearance="?android:attr/textAppearanceSmall"
+			            android:layout_centerHorizontal="true"
+			             android:textColor="#000000"    
+			             android:textSize="16sp" />
+			               
+			 		  <TextView
+			             android:id="@+id/tv_group_name"
+			             android:layout_width="wrap_content"
+			             android:layout_height="wrap_content"
+			             android:layout_alignParentRight="true"
+			             android:layout_toRightOf="@id/tv_group_name_tag"	
+			             android:paddingRight="40dp"
+			             android:gravity="right"
+			             android:layout_centerHorizontal="true"
+			             android:text="Text"
+			             android:textAppearance="?android:attr/textAppearanceSmall"
+			             android:textColor="#555555"    
+                    	 android:singleLine="true"
+                    	 android:ellipsize="end"			             
+			             android:textSize="16sp" />  
+			             
+			          <ImageView
+			              android:id="@+id/iv_goto_edit_name"
+			              android:layout_width="wrap_content"
+			              android:layout_height="wrap_content"			              
+			              android:layout_alignParentRight="true"
+			              android:layout_marginTop="5dp"			              
+			              android:paddingRight="20dp"
+			              android:src="@drawable/group_more" />
+ 
+			    </RelativeLayout>
+				<View
+		            android:layout_width="fill_parent"
+		            android:layout_height="1.0px"
+		            android:layout_marginTop="10dp"
+		            android:layout_marginLeft="5dp"
+		            android:layout_marginRight="5dp"
+		            android:background="#ffc0c3c4" />	
+		            			    
+				<RelativeLayout		
+			        android:id="@+id/rl_group_introduce"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_marginTop="10dp"
+			        android:layout_marginLeft="15dp" 
+			        android:clickable="true">    
+			
+			         <TextView
+			             android:id = "@+id/tv_group_introduce_tag"
+			             android:layout_width="wrap_content"
+			             android:layout_height="wrap_content"
+			             android:layout_alignParentLeft="true"
+			             android:paddingLeft="10dp"
+			             android:text="群简介"
+			             android:textAppearance="?android:attr/textAppearanceSmall"
+			            android:layout_centerHorizontal="true"
+			             android:textColor="#000000"    
+			             android:textSize="16sp" />
+			               
+			 		  <TextView
+			             android:id="@+id/tv_group_introduce"
+			             android:layout_width="wrap_content"
+			             android:layout_height="wrap_content"
+			             android:layout_alignParentRight="true"
+			             android:layout_toRightOf="@id/tv_group_introduce_tag"	
+			             android:paddingRight="40dp"
+			             android:gravity="right"
+			             android:layout_centerHorizontal="true"
+			             android:text="Text"
+			             android:textAppearance="?android:attr/textAppearanceSmall"
+			             android:textColor="#555555"    
+                    	 android:singleLine="true"
+                    	 android:ellipsize="end"			             
+			             android:textSize="16sp" />  
+			             
+			          <ImageView
+			              android:id="@+id/iv_goto_edit_introduce"
+			              android:layout_width="wrap_content"
+			              android:layout_height="wrap_content"			              
+			              android:layout_alignParentRight="true"
+			              android:layout_marginTop="5dp"			              
+			              android:paddingRight="20dp"
+			              android:src="@drawable/group_more" />
+ 
+			    </RelativeLayout>			    
+			    
+				<View
+		            android:layout_width="fill_parent"
+		            android:layout_height="1.0px"
+		            android:layout_marginTop="10dp"
+		            android:layout_marginLeft="5dp"
+		            android:layout_marginRight="5dp"
+		            android:background="#ffc0c3c4" />
+			    
+			    <RelativeLayout		
+			        android:id="@+id/rl_group_notification"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_marginTop="10dp"
+			        android:layout_marginLeft="15dp" 
+			        android:clickable="true">    
+			
+			         <TextView
+			             android:id = "@+id/tv_group_notification_tag"
+			             android:layout_width="wrap_content"
+			             android:layout_height="wrap_content"
+			             android:layout_alignParentLeft="true"
+			             android:paddingLeft="10dp"
+			             android:text="群公告"
+			             android:textAppearance="?android:attr/textAppearanceSmall"
+			            android:layout_centerHorizontal="true"
+			             android:textColor="#000000"    
+			             android:textSize="16sp" />
+			               
+			 		  <TextView
+			             android:id="@+id/tv_group_notification"
+			             android:layout_width="wrap_content"
+			             android:layout_height="wrap_content"
+			             android:layout_alignParentRight="true"
+			             android:layout_toRightOf="@id/tv_group_notification_tag"	
+			             android:paddingRight="40dp"
+			             android:gravity="right"
+			             android:layout_centerHorizontal="true"
+			             android:text="Text"
+			             android:textAppearance="?android:attr/textAppearanceSmall"
+			             android:textColor="#555555"    
+                    	 android:singleLine="true"
+                    	 android:ellipsize="end"			             
+			             android:textSize="16sp" />  
+			             
+			          <ImageView
+			              android:id="@+id/iv_goto_edit_notification"
+			              android:layout_width="wrap_content"
+			              android:layout_height="wrap_content"			              
+			              android:layout_alignParentRight="true"
+			              android:layout_marginTop="5dp"			              
+			              android:paddingRight="20dp"
+			              android:src="@drawable/group_more" />
+ 
+			    </RelativeLayout>
+				<View
+		            android:layout_width="fill_parent"
+		            android:layout_height="1.0px"
+		            android:layout_marginTop="10dp"
+		            android:layout_marginLeft="5dp"
+		            android:layout_marginRight="5dp"
+		            android:background="#ffc0c3c4" />	
+			    
+			    <RelativeLayout		
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_marginTop="10dp"
+			        android:layout_marginLeft="15dp" >    
+			
+			         <TextView
+			             android:layout_width="wrap_content"
+			             android:layout_height="wrap_content"
+			             android:layout_alignParentLeft="true"
+			             android:paddingLeft="10dp"
+			             android:text="群聊人数"
+			             android:textAppearance="?android:attr/textAppearanceSmall"
+			             android:textColor="#000000"    
+			             android:textSize="16sp" />
+			               
+			 		  <TextView
+			             android:id="@+id/tv_member_num"
+			             android:layout_width="wrap_content"
+			             android:layout_height="wrap_content"
+			             android:layout_alignParentRight="true"
+			             android:paddingRight="20dp"
+			             android:text="Text"
+			             android:textAppearance="?android:attr/textAppearanceSmall"
+			             android:textColor="#555555"    
+			             android:textSize="16sp" />   
+			    </RelativeLayout>			    
+			       <View
+		            android:layout_width="fill_parent"
+		            android:layout_height="1.0dp"
+		            android:layout_marginTop="10dp"
+		            android:layout_marginLeft="5dp"
+		            android:layout_marginRight="5dp"
+		            android:background="#ffc0c3c4" />
+			       
+			    <RelativeLayout		
+			        android:id="@+id/rl_member_manage"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_marginTop="10dp"
+			        android:layout_marginLeft="15dp"
+			        android:visibility="gone"
+			        >    
+			
+			         <TextView
+			             android:layout_width="wrap_content"
+			             android:layout_height="wrap_content"
+			             android:layout_alignParentLeft="true"
+			             android:paddingLeft="10dp"
+			             android:text="群成员"
+			             android:textAppearance="?android:attr/textAppearanceSmall"
+			             android:textColor="#000000"    
+			             android:textSize="16sp" />
+			               
+			 		 <ImageView
+			              android:id="@+id/iv_goto_role_set"
+			              android:layout_width="wrap_content"
+			              android:layout_height="wrap_content"			              
+			              android:layout_alignParentRight="true"
+			              android:layout_marginTop="5dp"			              
+			              android:paddingRight="20dp"
+			              android:src="@drawable/group_more" />  			               
+			    </RelativeLayout>			    
+		       <View
+		           android:id="@+id/v_member_manage"
+		            android:layout_width="fill_parent"
+		            android:layout_height="1.0dp"
+		            android:layout_marginTop="10dp"
+		            android:layout_marginLeft="5dp"
+		            android:layout_marginRight="5dp"
+		            android:background="#ffc0c3c4"
+		            android:visibility="gone" />		       			       
+         	 <RelativeLayout		
+			        android:id="@+id/rl_msg_opt_set"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_marginTop="10dp"
+			        android:layout_marginLeft="15dp" >    
+			
+			         <TextView
+			             android:layout_width="wrap_content"
+			             android:layout_height="wrap_content"
+			             android:layout_alignParentLeft="true"
+			             android:paddingLeft="10dp"
+			             android:text="群消息接收方式"
+			             android:textAppearance="?android:attr/textAppearanceSmall"
+			             android:textColor="#000000"    
+			             android:textSize="16sp" />
+			               
+			 		 <ImageView
+			              android:id="@+id/iv_goto_msg_opt_set"
+			              android:layout_width="wrap_content"
+			              android:layout_height="wrap_content"			              
+			              android:layout_alignParentRight="true"
+			              android:layout_marginTop="5dp"			              
+			              android:paddingRight="20dp"
+			              android:src="@drawable/group_more" />   
+			    </RelativeLayout>
+  		       <View
+		            android:layout_width="fill_parent"
+		            android:layout_height="1.0dp"
+		            android:layout_marginTop="10dp"
+		            android:layout_marginLeft="5dp"
+		            android:layout_marginRight="5dp"
+		            android:background="#ffc0c3c4" />	   
+		            
+         	 <RelativeLayout		
+			        android:id="@+id/rl_join_style_set"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_marginTop="10dp"
+			        android:layout_marginLeft="15dp"
+			        android:visibility="gone" >    
+			
+			         <TextView
+			             android:layout_width="wrap_content"
+			             android:layout_height="wrap_content"
+			             android:layout_alignParentLeft="true"
+			             android:paddingLeft="10dp"
+			             android:text="加群方式"
+			             android:textAppearance="?android:attr/textAppearanceSmall"
+			             android:textColor="#000000"    
+			             android:textSize="16sp" />
+			               
+			 		 <ImageView
+			              android:id="@+id/iv_goto_join_style_set"
+			              android:layout_width="wrap_content"
+			              android:layout_height="wrap_content"			              
+			              android:layout_alignParentRight="true"
+			              android:layout_marginTop="5dp"			              
+			              android:paddingRight="20dp"
+			              android:src="@drawable/group_more" />   
+			    </RelativeLayout>
+  		       <View
+		            android:layout_width="fill_parent"
+		            android:layout_height="1.0dp"
+		            android:layout_marginTop="10dp"
+		            android:layout_marginLeft="5dp"
+		            android:layout_marginRight="5dp"
+		            android:background="#ffc0c3c4" 
+		            android:visibility="gone" />	  		       
+			       
+               <Button
+                    android:id="@+id/btn_quit_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dip"
+                    android:layout_marginRight="20dip"
+                    android:layout_marginTop="20dp"                   
+                    android:background="@drawable/btn_alert_bg"
+                    android:text="删除并退出"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />			    		    
+		   </LinearLayout>
+	</ScrollView>	    
+</LinearLayout>

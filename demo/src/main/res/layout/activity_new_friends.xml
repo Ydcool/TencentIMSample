@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f0eb" >
+        
+        <RelativeLayout            
+  			android:layout_width="fill_parent"
+  			android:layout_height="45dp"
+  			android:id="@+id/title" 
+  			android:background="@drawable/title_bar"
+  			android:gravity="center_vertical"  > 		
+	
+
+		  <Button
+			android:id="@+id/btn_chat_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/back_btn"
+            android:gravity="center_horizontal|center_vertical"            
+            android:onClick="onBack" />            
+			            
+      		<TextView
+      		    android:id="@+id/top_name"
+        		android:layout_width="wrap_content" 
+        		android:layout_height="wrap_content" 
+        		android:text="系统消息"
+        		android:layout_centerInParent="true"
+        		android:textSize="20sp"		
+				android:textColor="#ffffff" /> 
+
+			<Button
+			    android:id="@+id/btn_goto_add_friend" 
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+			    android:layout_alignParentRight="true"
+			    android:layout_centerVertical="true"
+			    android:layout_marginRight="15dp"
+			    android:background="@drawable/add_friend" 
+			    android:visibility="gone"/>
+      
+		</RelativeLayout>
+		
+        
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bar_bottom"
+        android:layout_below="@id/title" >
+
+        <ProgressBar
+            android:id="@+id/pb_load_more"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone" />
+
+       	<ListView
+	           android:id="@+id/lv_new_friends"             
+	           android:layout_width="match_parent"
+	           android:layout_height="match_parent"
+	           android:layout_below="@+id/pb_load_more"
+	            android:background="@android:color/transparent"
+	             android:cacheColorHint="#00000000"	         
+	    		android:divider="#e0e0e0"
+				android:dividerHeight="0.5dp"  
+				android:scrollbars="none"        
+	            />		
+     </RelativeLayout>
+    
+ </RelativeLayout>

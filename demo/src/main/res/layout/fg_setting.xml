@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="@color/root_common"
+    android:orientation="vertical" >
+
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar"
+        android:background="@drawable/title_bar"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/message_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/setting"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+   		 </RelativeLayout>     
+    <ScrollView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+              <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" > 
+            
+ 		 <RelativeLayout
+  			     android:id="@+id/rl_ID" 		
+	         	android:layout_width="fill_parent"
+	  			android:layout_height="40dp"
+		        android:layout_marginLeft="28.0dip"
+		        android:layout_marginRight="28.0dip"
+		        android:layout_marginTop="10dp"
+	  			android:gravity="center_vertical" 
+	  			android:clickable="true" >    
+			
+			         <TextView
+		       			android:layout_width="wrap_content" 
+		        		android:layout_height="wrap_content" 
+		        		android:text="ID"
+		        		android:layout_alignParentLeft="true"
+		        		android:textSize="16sp"		
+						android:textColor="#000000"  />
+			               
+			 		  <TextView
+			             android:id="@+id/tv_user_ID"
+			             android:layout_width="250dp"
+			             android:layout_height="wrap_content"
+			             android:layout_alignParentRight="true"
+			             android:paddingRight="10dp"
+			             android:layout_centerHorizontal="true"
+			             android:text="Text"
+			             android:textAppearance="?android:attr/textAppearanceSmall"
+			             android:textColor="#555555"    
+                    	 android:singleLine="true"
+                    	 android:ellipsize="end"			             
+			             android:textSize="16sp" />  
+			    </RelativeLayout>    
+                    <View
+	            android:layout_width="fill_parent"
+	            android:layout_height="1.0px"
+	            android:layout_marginLeft="1.0px"
+	            android:layout_marginRight="1.0px"
+	            android:background="#ffc0c3c4" />
+              
+          <RelativeLayout 
+            android:id="@+id/rl_setting_face" 
+  			android:layout_width="fill_parent"
+  			android:layout_height="40dp"
+	        android:layout_marginLeft="28.0dip"
+	        android:layout_marginRight="28.0dip"
+	        android:layout_marginTop="5dip"			 	
+  			android:gravity="center_vertical" 
+  			android:clickable="true" 
+  			android:visibility="gone"> 
+
+      		<ImageView
+	              android:id="@+id/iv_face_more"
+	              android:layout_width="wrap_content"
+	              android:layout_height="wrap_content"	
+	              android:layout_marginTop="5dp"			              
+	              android:layout_alignParentRight="true"
+	              android:src="@drawable/group_more" />	 
+
+			<ImageView 
+			    android:id="@+id/iv_face"			    
+			    android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_toLeftOf="@id/iv_face_more"				
+	            android:layout_marginLeft="2dp"
+	            android:src="@drawable/user_icon" />
+
+			<TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true"
+			    android:layout_centerVertical="true"
+			    android:text="头像"
+			    android:textColor="#000000"
+			    android:textSize="16sp" />
+                      
+			</RelativeLayout>
+		        <View
+	            android:layout_width="fill_parent"
+	            android:layout_height="1.0px"
+	            android:layout_marginLeft="1.0px"
+	            android:layout_marginRight="1.0px"
+	            android:background="#ffc0c3c4" />        
+          
+        
+  			 <RelativeLayout
+  			        android:id="@+id/rl_setting_nick" 		
+	         	android:layout_width="fill_parent"
+	  			android:layout_height="40dp"
+		        android:layout_marginLeft="28.0dip"
+		        android:layout_marginRight="28.0dip"
+		        android:layout_marginTop="5dp"
+	  			android:gravity="center_vertical" 
+	  			android:clickable="true" >    
+			
+			         <TextView
+			            android:id="@+id/tv_nick_name_tag"
+		       			android:layout_width="wrap_content" 
+		        		android:layout_height="wrap_content" 
+		        		android:text="昵称"
+		        		android:layout_alignParentLeft="true"
+		        		android:textSize="16sp"		
+						android:textColor="#000000"  />
+			               
+			 		  <TextView
+			             android:id="@+id/tv_nick_name"
+			             android:layout_width="wrap_content"
+			             android:layout_height="wrap_content"
+			             android:layout_alignParentRight="true"			             
+			             android:layout_toRightOf="@id/tv_nick_name_tag"
+			             android:gravity="right"	
+			             android:paddingRight="40dp"
+			             android:layout_centerHorizontal="true"
+			             android:text="Text"
+			             android:textAppearance="?android:attr/textAppearanceSmall"
+			             android:textColor="#555555"    
+                    	 android:singleLine="true"
+                    	 android:ellipsize="end"			             
+			             android:textSize="16sp" />  			 		  			             
+			             
+			          <ImageView
+			              android:id="@+id/iv_goto_edit_nick"
+			              android:layout_width="wrap_content"
+			              android:layout_height="wrap_content"			              
+			              android:layout_alignParentRight="true"
+			              android:layout_marginTop="5dp"			              
+			              android:paddingRight="20dp"
+			              android:src="@drawable/group_more" />
+ 
+			    </RelativeLayout>       
+              <View
+	            android:layout_width="fill_parent"
+	            android:layout_height="1.0px"
+	            android:layout_marginLeft="1.0px"
+	            android:layout_marginRight="1.0px"
+	            android:background="#ffc0c3c4" />
+              
+			<RelativeLayout
+  			    android:id="@+id/rl_pass_style" 		
+	         	android:layout_width="fill_parent"
+	  			android:layout_height="40dp"
+		        android:layout_marginLeft="28.0dip"
+		        android:layout_marginRight="28.0dip"
+		        android:layout_marginTop="5dp"
+	  			android:gravity="center_vertical" 
+	  			android:clickable="true" >    
+			
+			         <TextView
+		       			android:layout_width="wrap_content" 
+		        		android:layout_height="wrap_content" 
+		        		android:text="加我为朋友时验证方式"
+		        		android:layout_alignParentLeft="true"
+		        		android:textSize="16sp"		
+						android:textColor="#000000"  />
+			               
+			          <ImageView
+			              android:id="@+id/iv_goto_pass_style"
+			              android:layout_width="wrap_content"
+			              android:layout_height="wrap_content"			              
+			              android:layout_alignParentRight="true"
+			              android:layout_marginTop="5dp"			              
+			              android:paddingRight="20dp"
+			              android:src="@drawable/group_more" />
+ 
+			    </RelativeLayout>              
+           <View
+	            android:layout_width="fill_parent"
+	            android:layout_height="1.0px"
+	            android:layout_marginLeft="1.0px"
+	            android:layout_marginRight="1.0px"
+	            android:background="#ffc0c3c4" />  
+	            
+           	<RelativeLayout
+  			    android:id="@+id/rl_black_list" 		
+	         	android:layout_width="fill_parent"
+	  			android:layout_height="40dp"
+		        android:layout_marginLeft="28.0dip"
+		        android:layout_marginRight="28.0dip"
+		        android:layout_marginTop="5dp"
+	  			android:gravity="center_vertical" 
+	  			android:clickable="true" >    
+			
+			         <TextView
+		       			android:layout_width="wrap_content" 
+		        		android:layout_height="wrap_content" 
+		        		android:text="通讯录黑名单"
+		        		android:layout_alignParentLeft="true"
+		        		android:textSize="16sp"		
+						android:textColor="#000000"  />
+			               
+			          <ImageView
+			              android:id="@+id/iv_blacklist"
+			              android:layout_width="wrap_content"
+			              android:layout_height="wrap_content"			              
+			              android:layout_alignParentRight="true"
+			              android:layout_marginTop="5dp"			              
+			              android:paddingRight="20dp"
+			              android:src="@drawable/group_more" />
+ 
+			    </RelativeLayout>              
+           <View
+	            android:layout_width="fill_parent"
+	            android:layout_height="1.0px"
+	            android:layout_marginLeft="1.0px"
+	            android:layout_marginRight="1.0px"
+	            android:background="#ffc0c3c4" /> 
+         <RelativeLayout 
+  			android:layout_width="fill_parent"
+  			android:layout_height="40dp"
+	        android:layout_marginLeft="28.0dip"
+	        android:layout_marginRight="28.0dip"
+	        android:layout_marginTop="5.0dip"  			
+  			android:id="@+id/setting_notify"   	
+  			android:gravity="center_vertical" 
+  			android:visibility="gone" >
+
+			<ToggleButton
+			    android:id="@+id/tb_set_notify"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentRight="true"
+			    android:background="@drawable/img_setting_switch" />
+
+			<TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true"
+			    android:layout_centerVertical="true"
+			    android:text="开启通知"
+			    android:textColor="#000000"
+			    android:textSize="16sp" />
+      
+		</RelativeLayout>
+            <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_marginLeft="1.0px"
+            android:layout_marginRight="1.0px"
+            android:background="#ffc0c3c4" />
+         <RelativeLayout 
+  			android:layout_width="fill_parent"
+  			android:layout_height="40dp"
+	        android:layout_marginLeft="28.0dip"
+	        android:layout_marginRight="28.0dip"
+	        android:layout_marginTop="5.0dp"  			
+  			android:gravity="center_vertical" 
+  			android:visibility="gone" > 
+
+			<ToggleButton 
+			       android:id="@+id/tb_set_voice"
+			       android:layout_width="wrap_content"
+			       android:layout_height="wrap_content"
+			       android:layout_alignParentRight="true"
+			       android:background="@drawable/img_setting_switch"/>
+
+			<TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignBottom="@+id/tb_set_voice"
+			    android:layout_alignParentLeft="true"
+			    android:text="开启声音"
+			    android:textColor="#000000"
+			    android:textSize="16sp" />
+      
+		</RelativeLayout>
+		        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_marginLeft="1.0px"
+            android:layout_marginRight="1.0px"
+            android:background="#ffc0c3c4" />
+         <RelativeLayout 
+  			android:layout_width="fill_parent"
+  			android:layout_height="40dp"
+	        android:layout_marginLeft="28.0dip"
+	        android:layout_marginRight="28.0dip"
+	        android:layout_marginTop="5.0dip"  	  			   	
+  			android:gravity="center_vertical" 
+  			android:visibility="gone" > 
+
+			<ToggleButton 
+			       android:id="@+id/tb_set_vibrate"
+			       android:layout_width="wrap_content"
+			       android:layout_height="wrap_content"
+			       android:layout_alignParentRight="true"
+			       android:background="@drawable/img_setting_switch"/>
+
+			<TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true"
+			    android:layout_centerVertical="true"
+			    android:text="开启震动"
+			    android:textColor="#000000"
+			    android:textSize="16sp" />
+      
+		</RelativeLayout>         
+		
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_marginLeft="1.0px"
+            android:layout_marginRight="1.0px"
+            android:background="#ffc0c3c4" />  
+            
+		 <RelativeLayout 
+  			android:layout_width="fill_parent"
+  			android:layout_height="40dp"
+	        android:layout_marginLeft="28.0dip"
+	        android:layout_marginRight="28.0dip"
+	        android:layout_marginTop="5.0dip"  	  			   	
+  			android:gravity="center_vertical" 
+  			 > 
+
+			<ToggleButton 
+			       android:id="@+id/tb_set_env"
+			       android:layout_width="wrap_content"
+			       android:layout_height="wrap_content"
+			       android:layout_alignParentRight="true"
+			       android:background="@drawable/img_setting_switch"/>
+
+			<TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true"
+			    android:layout_centerVertical="true"
+			    android:text="测试环境"
+			    android:textColor="#000000"
+			    android:textSize="16sp" />
+      
+		</RelativeLayout>        
+             <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_marginLeft="1.0px"
+            android:layout_marginRight="1.0px"
+            android:background="#ffc0c3c4" />  
+        
+       <RelativeLayout 
+  			android:layout_width="fill_parent"
+  			android:layout_height="40dp"
+	        android:layout_marginLeft="28.0dip"
+	        android:layout_marginRight="28.0dip"
+	        android:layout_marginTop="5.0dip"  	  			   	
+  			android:gravity="center_vertical"  > 
+
+			<ToggleButton 
+			       android:id="@+id/tb_set_log_console"
+			       android:layout_width="wrap_content"
+			       android:layout_height="wrap_content"
+			       android:layout_alignParentRight="true"
+			       android:background="@drawable/img_setting_switch"/>
+
+			<TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true"
+			    android:layout_centerVertical="true"
+			    android:text="控制台打印日志"
+			    android:textColor="#000000"
+			    android:textSize="16sp" />
+      
+		</RelativeLayout>   
+		   <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_marginLeft="1.0px"
+            android:layout_marginRight="1.0px"
+            android:background="#ffc0c3c4" />     
+		<RelativeLayout
+  			    android:id="@+id/rl_log_level" 		
+	         	android:layout_width="fill_parent"
+	  			android:layout_height="40dp"
+		        android:layout_marginLeft="28.0dip"
+		        android:layout_marginRight="28.0dip"
+		        android:layout_marginTop="5dp"
+	  			android:gravity="center_vertical" 
+	  			android:clickable="true" >    
+			
+			         <TextView
+		       			android:layout_width="wrap_content" 
+		        		android:layout_height="wrap_content" 
+		        		android:text="日志级别"
+		        		android:layout_alignParentLeft="true"
+		        		android:textSize="16sp"		
+						android:textColor="#000000"  />
+			               
+			          <ImageView
+			              android:id="@+id/iv_goto_log_level"
+			              android:layout_width="wrap_content"
+			              android:layout_height="wrap_content"			              
+			              android:layout_alignParentRight="true"
+			              android:layout_marginTop="5dp"			              
+			              android:paddingRight="20dp"
+			              android:src="@drawable/group_more" />
+ 
+			    </RelativeLayout>              
+           <View
+	            android:layout_width="fill_parent"
+	            android:layout_height="1.0px"
+	            android:layout_marginLeft="1.0px"
+	            android:layout_marginRight="1.0px"
+	            android:background="#ffc0c3c4" />
+           
+ 			<RelativeLayout
+  			     android:id="@+id/rl_Version" 		
+	         	android:layout_width="fill_parent"
+	  			android:layout_height="40dp"
+		        android:layout_marginLeft="28.0dip"
+		        android:layout_marginRight="28.0dip"
+		        android:layout_marginTop="10dp"
+	  			android:gravity="center_vertical" 
+	  			android:clickable="true" >    
+			
+			         <TextView
+		       			android:layout_width="wrap_content" 
+		        		android:layout_height="wrap_content" 
+		        		android:text="版本"
+		        		android:layout_alignParentLeft="true"
+		        		android:textSize="16sp"		
+						android:textColor="#000000"  />
+			               
+			 		  <TextView
+			             android:id="@+id/tv_version"
+			             android:layout_width="wrap_content"
+			             android:layout_height="wrap_content"
+			             android:layout_alignParentRight="true"
+			             android:paddingRight="10dp"
+			             android:layout_centerHorizontal="true"
+			             android:text="Text"
+			             android:textAppearance="?android:attr/textAppearanceSmall"
+			             android:textColor="#555555"    
+                    	 android:singleLine="true"
+                    	 android:ellipsize="end"			             
+			             android:textSize="16sp" />  
+			    </RelativeLayout>    
+                    <View
+	            android:layout_width="fill_parent"
+	            android:layout_height="1.0px"
+	            android:layout_marginLeft="1.0px"
+	            android:layout_marginRight="1.0px"
+	            android:background="#ffc0c3c4" />
+                               
+           
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="30dip"
+               android:background="#ffffff"
+               android:orientation="vertical" >
+                
+               <Button
+                   android:id="@+id/btn_logout"
+                   android:layout_width="match_parent"
+                   android:layout_height="40dp"
+                  
+                   android:layout_marginLeft="10dip"
+                   android:layout_marginRight="10dip"
+                   android:layout_marginTop="5dp"                   
+                   android:background="@drawable/btn_alert_bg"
+                   android:text="退出"
+                   android:textColor="@color/white"
+                   android:textSize="20sp" />
+           </LinearLayout>     
+           </LinearLayout> 
+              </ScrollView>  
+</LinearLayout>

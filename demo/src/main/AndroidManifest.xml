@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mydemo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.GET_TASKS" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.READ_LOGS"/>
+	<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.RECORD_AUDIO"/>
+	<uses-permission android:name="android.permission.CAMERA"/>
+	<uses-feature android:name="android.hardware.camera" /> 
+	<uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>	
+ 	<uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />     <!-- 发送短信-->
+    <uses-permission android:name="android.permission.READ_SMS" />     <!-- 读取短信 -->
+    <uses-permission android:name="android.permission.WRITE_SMS" />    <!-- 写入消息 -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />  <!-- 接收消息 -->
+	
+	
+	    
+    <application
+        android:name="com.example.mydemo.MyApplication"
+        android:allowBackup="false"        
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:hardwareAccelerated="false"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <!-- 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+             -->
+        </activity>       
+        
+        
+      <!-- splash -->
+           <activity
+            android:name="com.example.mydemo.activity.SplashActivity"
+            android:screenOrientation="portrait"           
+            android:theme="@android:style/Theme.NoTitleBar" >
+         
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.example.mydemo.activity.RegisterNewActivity"
+           android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.example.mydemo.activity.LoginNewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.example.mydemo.activity.ImgVerifyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+                   
+           
+        
+        <!-- login -->
+        <activity
+            android:name="com.example.mydemo.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+
+        <!-- register -->
+        <activity
+            android:name="com.example.mydemo.activity.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+  
+         
+          
+                <!-- chatActivity -->
+        <activity
+            android:name="com.example.mydemo.activity.ChatNewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        
+        <activity
+            android:name=".activity.AddFriendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>    
+            
+        <activity
+            android:name="com.example.mydemo.activity.CreateGroupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>      
+        
+        <activity
+            android:name="com.example.mydemo.activity.GroupListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>           
+   
+        <activity
+            android:name="com.example.mydemo.activity.GroupInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>          
+
+        <activity
+            android:name="com.example.mydemo.activity.InviteToGroupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>               
+
+        <activity
+            android:name="com.example.mydemo.activity.DeleteGroupMemberActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>   
+                    
+         <activity
+            android:name="com.example.mydemo.activity.EditGroupNameActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>      
+                   
+        <activity
+            android:name="com.example.mydemo.activity.DisplayOrgPicActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>          
+
+        <activity
+            android:name="com.example.mydemo.activity.SetFaceActivity"
+            android:screenOrientation="portrait"  
+            android:theme="@style/Transparent" >
+        </activity> 
+        
+        <activity
+            android:name="com.example.mydemo.activity.EditNickNameActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>              
+ 
+        <activity
+            android:name="com.example.mydemo.activity.NewFriendsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>  
+                  
+        <activity
+            android:name="com.example.mydemo.activity.ChatMenuActivity"
+            android:screenOrientation="portrait"          
+		    android:theme="@style/Transparent" >
+        </activity>          
+   
+        <activity
+            android:name="com.example.mydemo.activity.SystemTipsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>  
+                
+        <activity
+            android:name="com.example.mydemo.activity.UserInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>    
+        
+        <activity
+            android:name="com.example.mydemo.activity.SearchGroupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        
+        
+         <activity
+            android:name="com.example.mydemo.activity.GroupSimpleInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity> 
+        
+         <activity
+            android:name="com.example.mydemo.activity.PassStyleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>     
+        
+         <activity
+            android:name="com.example.mydemo.activity.SetLogLevelActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>      
+                 
+          <activity
+            android:name="com.example.mydemo.activity.AddFriendNewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>                    
+          <activity
+            android:name="com.example.mydemo.activity.AddFriendInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>  
+		<activity
+            android:name="com.example.mydemo.activity.BlackListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>    
+		<activity
+            android:name="com.example.mydemo.activity.EditGroupNotificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+                   
+		<activity
+            android:name="com.example.mydemo.activity.EditGroupIntroduceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>                      
+           
+		<activity
+            android:name="com.example.mydemo.activity.ReceiveMsgOptActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>        
+        
+		<activity
+            android:name="com.example.mydemo.activity.GroupJoinStyleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity> 
+        		
+		<activity
+            android:name="com.example.mydemo.activity.GroupMemberManageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>             
+        
+		<activity
+            android:name="com.example.mydemo.activity.SetSlienceTimeActivity"
+            android:screenOrientation="portrait"  
+            android:theme="@style/Transparent" > 
+        </activity>   
+       
+		<activity
+            android:name="com.example.mydemo.activity.PhotoPreviewActivity"
+            android:screenOrientation="portrait"  
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity> 		
+
+		<activity
+            android:name="com.example.mydemo.activity.VideoActivity"
+            android:screenOrientation="portrait"  
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        
+		<activity
+            android:name="com.example.mydemo.activity.NewVideoAcitivty"
+            android:screenOrientation="portrait"  
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity> 
+        
+		<activity
+            android:name="com.example.mydemo.activity.DisplayVideoActivity"
+            android:screenOrientation="portrait"  
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity> 							
+		
+		<activity
+            android:name="com.example.mydemo.activity.EditGroupNickNameActivity"
+            android:screenOrientation="portrait"  
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity> 			
+		
+		<activity
+            android:name="com.example.mydemo.activity.AvActivity"
+		    android:configChanges="keyboardHidden|orientation|locale|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>   
+        
+		<activity 
+		    android:name="com.example.mydemo.activity.AvPrepareActivity"
+		    android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+		    android:theme="@style/Transparent">		    
+		</activity>
+				
+     <!-- main -->
+        <activity
+            android:name="com.example.mydemo.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>    
+    <!--    
+        
+        <activity
+            android:name="com.tencent.tls.activity.HostLoginActivity"
+            android:label="@string/tencent_tls_ui_app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/tencent_tls_ui_theme">
+        </activity>
+        <activity
+            android:name="com.tencent.tls.activity.HostRegisterActivity"
+            android:label="@string/tencent_tls_ui_title_activity_host_register"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/tencent_tls_ui_theme">
+        </activity>
+        <activity
+            android:name="com.tencent.tls.activity.IndependentLoginActivity"
+            android:label="@string/tencent_tls_ui_title_activity_independent_login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/tencent_tls_ui_theme" >
+        </activity>
+        <activity
+            android:name="com.tencent.tls.activity.IndependentRegisterActivity"
+            android:label="@string/tencent_tls_ui_title_activity_independent_register"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/tencent_tls_ui_theme" >
+        </activity>
+        <activity
+            android:name="com.tencent.tls.activity.ImgCodeActivity"
+            android:label="@string/tencent_tls_ui_title_activity_imgcode"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/tencent_tls_ui_theme">
+        </activity>
+        <activity
+            android:name="com.tencent.tls.activity.SelectCountryCodeActivity"
+            android:label="SelectCountryCodeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/tencent_tls_ui_theme">
+        </activity>
+        <activity
+            android:name="com.tencent.tls.activity.PhonePwdLoginActivity"
+            android:label="@string/tencent_tls_ui_title_activity_phone_pwd"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/tencent_tls_ui_theme">
+        </activity>
+        <activity
+            android:name="com.tencent.tls.activity.PhonePwdRegisterActivity"
+            android:label="@string/tencent_tls_ui_title_activity_phone_pwd_register"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/tencent_tls_ui_theme">
+        </activity>
+        <activity
+            android:name="com.tencent.tls.activity.ResetPhonePwdActivity"
+            android:label="@string/tencent_tls_ui_title_activity_reset_phone_pwd"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/tencent_tls_ui_theme">
+        </activity>
+  
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1104701569" />
+            </intent-filter>
+        </activity>
+        -->
+        
+<!-- 微信登录 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:label="WXEntryActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+                
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    </application>
+
+</manifest>

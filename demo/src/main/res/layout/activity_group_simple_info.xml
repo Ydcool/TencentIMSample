@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="@color/root_common"
+    android:orientation="vertical" >
+
+     <RelativeLayout
+         android:layout_width="fill_parent"
+         android:layout_height="@dimen/top_bar"
+         android:background="@drawable/title_bar"
+         android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/back_btn"
+            android:gravity="center_horizontal|center_vertical"            
+            android:onClick="onBack" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="群资料"
+            android:textColor="@color/white"
+            android:textSize="20.0sp" /> 
+    </RelativeLayout>
+
+      <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="25dp">
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"    
+            android:focusable="false" 
+            android:src="@drawable/icon_group"/>
+
+   		 <TextView
+	           android:id="@+id/tv_name"
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"	             
+	           android:layout_toRightOf="@id/iv_avatar"
+	           android:layout_marginTop="5dp" 	            
+	           android:paddingLeft="15dp"
+	           android:textSize="20sp"	           
+	           android:text = "groupName"
+	           android:textColor="#000000" />
+
+      
+    </RelativeLayout>    
+           
+         <RelativeLayout 
+  			android:layout_width="fill_parent"
+  			android:layout_height="45dp"
+	        android:layout_marginLeft="28.0dip"
+	        android:layout_marginRight="28.0dip"
+	        android:layout_marginTop="40.0dip"  
+  			android:gravity="center_vertical"  >  
+  			
+      		<TextView
+      		    android:id="@+id/tv_creator1"      		    
+        		android:layout_width="wrap_content" 
+        		android:layout_height="wrap_content" 
+        		android:text="群主"
+        		android:layout_alignParentLeft="true"
+        		android:textSize="20sp"		
+				android:textColor="#555555" /> 
+
+      		<TextView
+      		   android:id="@+id/tv_creator"
+        		android:layout_width="wrap_content" 
+        		android:layout_height="wrap_content" 
+        		android:layout_toRightOf="@id/tv_creator1"
+        		android:layout_marginLeft="15dp"
+        		android:text="text001"        
+        		android:textSize="20sp"		
+				android:textColor="#000000" />     
+		</RelativeLayout>
+            <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_marginLeft="1.0px"
+            android:layout_marginRight="1.0px"
+            android:background="#ffc0c3c4" />
+		      
+           
+         <RelativeLayout 
+  			android:layout_width="fill_parent"
+  			android:layout_height="45dp"
+	        android:layout_marginLeft="28.0dip"
+	        android:layout_marginRight="28.0dip"
+	        android:layout_marginTop="10dp"  
+  			android:gravity="center_vertical"  >  
+  			
+      		<TextView   
+      		    android:id="@+id/tv_group_desc1"   		   
+        		android:layout_width="wrap_content" 
+        		android:layout_height="wrap_content" 
+        		android:text="群介绍"
+        		android:layout_alignParentLeft="true"
+        		android:textSize="20sp"		
+				android:textColor="#555555" /> 
+
+      		<TextView
+      		     android:id="@+id/tv_group_desc"
+        		android:layout_width="wrap_content" 
+        		android:layout_height="wrap_content" 
+        		android:layout_toRightOf="@id/tv_group_desc1"
+        		android:layout_marginLeft="15dp"
+        		android:text="text001"        
+        		android:textSize="20sp"		
+				android:textColor="#000000" />     
+		</RelativeLayout>
+            <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_marginLeft="1.0px"
+            android:layout_marginRight="1.0px"
+            android:background="#ffc0c3c4" />
+		         
+            
+      <Button
+            android:id="@+id/btn_join_group"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="30dp"                   
+            android:background="@drawable/btn_register_bg"
+            android:text="加入"
+            android:textColor="@color/white"
+            android:textSize="20sp" />   
+</LinearLayout>

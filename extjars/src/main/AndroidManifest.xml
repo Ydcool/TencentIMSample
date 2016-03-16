@@ -1,0 +1,11 @@
+<manifest package="me.ydcool.extjars"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="false"
+        android:supportsRtl="true"
+        >
+
+    </application>
+
+</manifest>

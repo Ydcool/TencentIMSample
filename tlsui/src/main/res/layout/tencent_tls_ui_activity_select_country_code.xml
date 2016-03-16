@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="demo.tencent.com.tlssample.SelectCountryCodeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#0066CC">
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:text="返回" />
+
+        <TextView
+            style="@style/tencent_tls_ui_titleFontStyle"
+            android:textColor="@android:color/white"
+            android:text="选择国家和地区"/>
+
+    </RelativeLayout>
+
+    <com.tencent.tls.customview.EditTextWithClearButton
+        android:id="@+id/filter_edit"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="32dp"
+        android:padding="4dp"
+        android:drawableLeft="@drawable/tencent_tls_ui_search_black"
+        android:background="@drawable/tencent_tls_ui_rounded_rectangle_normal"
+        android:singleLine="true"
+        android:textSize="15dp"
+        android:hint="搜索" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ListView
+            android:id="@+id/country_lvcountry"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:divider="@null" />
+
+        <TextView
+            android:id="@+id/dialog"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:background="@drawable/tencent_tls_ui_show_toast_bg"
+            android:gravity="center"
+            android:textColor="@color/tencent_tls_ui_white"
+            android:textSize="20dp"
+            android:visibility="invisible" />
+
+        <com.tencent.tls.customview.SideBar
+            android:id="@+id/sidebar"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center" />
+    </FrameLayout>
+
+</LinearLayout>

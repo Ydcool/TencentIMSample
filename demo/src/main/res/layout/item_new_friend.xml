@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/root_common"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+     
+    
+    <LinearLayout
+        android:id="@+id/input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="20.0dip"
+        android:layout_marginTop="20.0dip"
+        android:orientation="horizontal" >  
+        
+  			<ImageView
+	            android:id="@+id/iv_avatar"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_centerVertical="true"
+	            android:layout_marginLeft="2dp"
+	            android:src="@drawable/user_icon" 
+	            android:focusable="false" />
+  			
+  			    <LinearLayout
+			        android:id="@+id/ll_request"
+			         android:layout_weight="8"
+			        android:layout_width="0dp"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="10.0dip"
+			        android:layout_marginRight="20.0dip"			    
+			        android:orientation="vertical" >  
+
+		            <TextView
+		                android:id="@+id/friend_name"  
+		                android:layout_width="fill_parent"
+		                android:layout_height="wrap_content"
+		                android:paddingLeft="3dp"
+		                android:text="Text"
+		                android:textAppearance="?android:attr/textAppearanceSmall"
+		                android:textColor="#000000"
+		                android:textColorLink="#000000"
+		                android:textSize="18sp" />
+		            
+		            
+		            <TextView
+		                android:id="@+id/tv_content"  
+		                android:layout_width="fill_parent"
+		                android:layout_height="wrap_content"
+		                android:paddingLeft="3dp"
+		                android:text="Text"              
+	                    android:singleLine="true"
+	                    android:ellipsize="end"
+	                    android:textAppearance="?android:attr/textAppearanceSmall"
+	                    android:textColorLink="#888888" />		            
+			</LinearLayout>   
+	        <Button
+	            android:id="@+id/btn_accept_friend"
+	            android:layout_width="40dp"  
+	            android:layout_weight="1"
+	            android:layout_height="35dp"            
+	            android:layout_marginLeft="10dip"
+	            android:background="@drawable/wait_accept_friend"	       
+	            android:text="接受"
+	            android:textSize="16sp" 
+	            android:visibility="gone"/>
+        
+    </LinearLayout>                   
+            
+</LinearLayout>

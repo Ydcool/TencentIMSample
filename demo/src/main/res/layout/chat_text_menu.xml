@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainweixin"
+    android:layout_width="fill_parent"    
+    android:orientation="vertical"
+    android:layout_height="fill_parent"   
+ >  
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"   
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"          
+        android:layout_centerInParent="true"
+        android:background="#ffffff"        
+        android:orientation="vertical" >   
+    		<Button
+     		     android:id="@+id/bt_delete"
+        		android:layout_width="fill_parent" 
+        		android:layout_height="50dp"     
+        		android:text="删除"
+        		android:layout_gravity="center_horizontal"
+        		android:textSize="20sp"		
+				android:textColor="#000000" 
+				android:clickable="true"
+				 android:onClick="onDelete"
+				android:background="#ffffff"/> 
+	        <View
+	            android:layout_width="fill_parent"
+	            android:layout_height="1.0px"
+	            android:layout_marginLeft="1.0px"
+	            android:layout_marginRight="1.0px"
+	            android:background="#ffc0c3c4" />
+	        
+	        
+	        <Button
+	            android:id="@+id/bt_copy"
+           		android:layout_width="fill_parent" 
+        		android:layout_height="50dp"     
+        		android:text="复制"
+        		android:layout_gravity="center_horizontal"
+        		android:textSize="20sp"		
+				android:textColor="#000000" 
+				android:clickable="true"
+				 android:onClick="onCopy"
+				android:background="#ffffff"/> 
+				
+	        <View
+	            android:layout_width="fill_parent"
+	            android:layout_height="1.0px"
+	            android:layout_marginLeft="1.0px"
+	            android:layout_marginRight="1.0px"
+	            android:background="#ffc0c3c4" />
+	        
+	        
+	        <Button
+	            android:id="@+id/bt_resend"
+           		android:layout_width="fill_parent" 
+        		android:layout_height="50dp"     
+        		android:text="重发"
+        		android:layout_gravity="center_horizontal"
+        		android:textSize="20sp"		
+				android:textColor="#000000" 
+				android:clickable="true"
+				 android:onClick="onResend"
+				android:background="#ffffff"/> 	  
+				      
+    	        <View
+	            android:layout_width="fill_parent"
+	            android:layout_height="1.0px"
+	            android:layout_marginLeft="1.0px"
+	            android:layout_marginRight="1.0px"
+	            android:background="#ffc0c3c4" />
+	        
+	        
+	        <Button
+	            android:id="@+id/bt_save"
+           		android:layout_width="fill_parent" 
+        		android:layout_height="50dp"     
+        		android:text="保存"
+        		android:layout_gravity="center_horizontal"
+        		android:textSize="20sp"		
+				android:textColor="#000000" 
+				android:clickable="true"
+				 android:onClick="onSave"
+				android:background="#ffffff"/> 	
+	</LinearLayout>
+</RelativeLayout>

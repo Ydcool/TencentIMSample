@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainweixin"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/root_common" >  
+
+ 
+    <LinearLayout
+        android:id="@+id/ll_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"    		
+        android:background="@drawable/skin_aio_input_bar_bg" 
+        android:orientation="horizontal" >
+   	
+
+             <RelativeLayout
+	            android:id="@+id/rl_goto_recent"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1" >
+		            <RadioButton                
+		                android:id="@+id/btn_goto_recent"
+		  				android:layout_width="wrap_content"
+						android:layout_height="wrap_content"			 		
+		                 android:layout_centerInParent="true"						
+						android:button="@null"		
+						/>  
+					<TextView					      
+		                android:id="@+id/tv_unread_num"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"		               
+		                android:layout_alignParentRight="true"
+		                 android:layout_marginTop="10dp"               
+               			android:layout_marginRight="30dp"        
+		                android:background="@drawable/recent_unread"
+		                android:text="1"
+		                android:gravity="center"
+		                android:textColor="#ffffff"
+		                android:textSize="12sp"
+		                android:visibility="gone"/>
+					
+			</RelativeLayout>
+
+              <RelativeLayout
+	            android:id="@+id/rl_goto_contacts"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1" >
+		            <RadioButton
+		                android:id="@+id/btn_goto_contacts"
+		           		android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_centerInParent="true"
+						android:button="@null"/>  
+					<ImageView					      
+		                android:id="@+id/iv_unread_flag"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_alignParentRight="true"
+		                android:layout_marginTop="10dp"
+		                android:layout_marginRight="45dp"
+		                android:background="@drawable/skin_unread"
+		                android:visibility="gone"/>						
+			</RelativeLayout>
+			
+           <RelativeLayout
+	            android:id="@+id/rl_goto_setting"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1" >              
+	            <RadioButton
+	                android:id="@+id/btn_goto_setting"
+	    			android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerInParent="true"
+					android:button="@null"/>
+     	</RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rl_fgmanager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_bottom_bar" />
+</RelativeLayout>
