@@ -1,5 +1,7 @@
 ### 腾讯云通信 Demo
 
+[![Build Status](https://travis-ci.org/Ydcool/TencentIMSample.svg?branch=master)](https://travis-ci.org/Ydcool/TencentIMSample)
+
 源代码来自 [官网](http://www.qcloud.com/product/im.html)，本项目是官网的 Android Studio 移植版本。( 官网 Eclipse 版本槽点太多! 😒 )  
 
 
