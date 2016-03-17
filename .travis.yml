@@ -14,7 +14,7 @@ script:
  - ./gradlew assembleRelease
 deploy:
   provider: releases
-  file: demo/app-release-unsigned.apk
+  file: demo/demo-release-unsigned.apk
   skip_cleanup: true
   on:
     tags: true
