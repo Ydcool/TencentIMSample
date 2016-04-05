@@ -3,14 +3,16 @@ package com.example.mydemo;
 import android.app.Activity;
 
 import com.example.mydemo.data.IMData;
-import com.example.mydemo.utils.Foreground;
 import com.tencent.TIMBaseApplication;
+import com.tencent.TIMManager;
+import com.tencent.TIMOfflinePushListener;
+import com.tencent.TIMOfflinePushNotification;
+import com.tencent.qalsdk.sdk.MsfSdkUtils;
+import com.tencent.qalsdk.util.QLog;
 
 public class MyApplication extends TIMBaseApplication {
     private static final String TAG = SDKHelper.class.getSimpleName();
     private static MyApplication instance;
-    private SDKHelper helper = new SDKHelper();
-    private TLSHelper tlsHelper = new TLSHelper();
     private boolean isBackground;
 
     private IMData imdata = null;
@@ -23,12 +25,22 @@ public class MyApplication extends TIMBaseApplication {
     @Override
     public void onCreate() {
         super.onCreate();
-        // Thread.setDefaultUncaughtExceptionHandler(this);
         instance = this;
         imdata = new IMData(this);
-        helper.init(this);
-        tlsHelper.init(this);
-        Foreground.init(this);
+        QLog.d(TAG, "app onCreate");
+        if (MsfSdkUtils.isMainProcess(this)) {
+            QLog.d(TAG, "main proccess onCreate");
+            TIMManager.getInstance().setOfflinePushListener(new TIMOfflinePushListener() {
+
+                @Override
+                public void handleNotification(TIMOfflinePushNotification arg0) {
+                    // TODO Auto-generated method stub
+                    QLog.d(TAG, "offlinemsg:" + arg0.getTitle() + ":" + arg0.getContent());
+                    arg0.doNotify(MyApplication.this, R.drawable.ic_launcher);
+                }
+
+            });
+        }
     }
 
 
@@ -36,9 +48,6 @@ public class MyApplication extends TIMBaseApplication {
         return instance;
     }
 
-    public boolean isClientStart() {
-        return helper.getClientStarted();
-    }
 
     public String getUserName() {
         if (userName == null) {
