@@ -44,8 +44,8 @@
         </receiver>
 ```
 
-2 . 如果需要离线推送通知，需要在application的onCreate中调用TIMManager中的setOfflinePushListener接口注册离线推送通知回调（具体参数可以参考相应的javadoc）。如下：
-   注意：onCreate() 这里只是初始化离线处理必须的逻辑。app正常启动初始化逻辑建议放在activity中。
+2 . 如果需要离线推送通知，需要在 `application` 的 `onCreate` 中调用 `TIMManager` 中的 `setOfflinePushListener` 接口注册离线推送通知回调（具体参数可以参考相应的 javadoc ）。如下：
+   注意：`onCreate()` 这里只是初始化离线处理必须的逻辑。app 正常启动初始化逻辑建议放在 `activity` 中。
    
 ```java
 public class MyApplication extends Application {
@@ -72,6 +72,7 @@ public class MyApplication extends Application {
 
 #### Jar 包说明
 
+| jar 包 | 描述 |
 |----|----|
 | beacon_android_v1.9.9.jar | 灯塔上报jar包 |
 | bugly_1.2.8_imsdk_release.jar | crash上报jar包 |
