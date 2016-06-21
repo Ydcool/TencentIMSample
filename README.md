@@ -1,4 +1,7 @@
-### 腾讯云通信 Demo
+### 腾讯云通信 Demo 
+
+DEPRECATED:官方已移植到 Android Studio 🍺 请移步官网下载最新版本。
+---
 
 [![Build Status](https://travis-ci.org/Ydcool/TencentIMSample.svg?branch=master)](https://travis-ci.org/Ydcool/TencentIMSample)
 
